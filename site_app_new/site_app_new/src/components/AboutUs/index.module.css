@@ -1,0 +1,29 @@
+.about_us_section {
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 0;
+}
+
+.accent {
+    color:  #005FA3;
+    display: block;
+}
+
+.about_us_info {
+   width: 445px;
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 25px; 
+}
+
+.about_us_section h2 {
+    margin-bottom: 60px;
+}
+
+.about_us_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 255px);
+    grid-template-rows: repeat(2, 255px);
+    gap: 30px;
+    padding-top: 24px;
+}
