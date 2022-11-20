@@ -21,3 +21,12 @@
   font-size: 48px;
   font-weight: 900;
  }
+
+ @media (max-width: 1100px) {
+  .wrapper{
+    max-width: 630px;
+  }
+  .subheader {
+    display: none;
+  }
+ }

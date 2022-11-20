@@ -31,3 +31,14 @@
     font-weight: 700;
     line-height: 17px;
 }
+
+@media (max-width: 1100px) {
+    .about_as_card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about_as_card p:nth-child(2) {
+        width: 150px;
+    }
+}

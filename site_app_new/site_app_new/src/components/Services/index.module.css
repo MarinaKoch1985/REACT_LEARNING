@@ -16,3 +16,17 @@
 .services_block h2 {
     margin-bottom: 100px;
 }
+
+@media (max-width: 1100px) {
+    .services_container {
+        grid-template-columns: 1fr;
+    }
+
+    .services_block {
+        padding: 50PX 0 80px 0;
+    }
+
+    .services_block h2 {
+        margin-bottom: 63px;
+    }
+}

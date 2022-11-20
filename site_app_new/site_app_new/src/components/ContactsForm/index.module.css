@@ -50,3 +50,9 @@
     
 }
 
+@media (max-width: 1100px) {
+    .contacts_form{
+        width: 100%;
+    }
+}
+

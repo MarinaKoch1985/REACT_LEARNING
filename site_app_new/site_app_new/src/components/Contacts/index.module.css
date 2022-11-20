@@ -27,3 +27,13 @@
     
 }
 
+@media (max-width: 1100px) {
+    .contacts_block {
+        flex-direction: column;
+    }
+
+    .contacts_info {
+       margin-bottom: 80px; 
+       width: 100%;
+    }
+}

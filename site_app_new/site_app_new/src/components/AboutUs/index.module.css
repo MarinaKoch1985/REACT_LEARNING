@@ -27,3 +27,24 @@
     gap: 30px;
     padding-top: 24px;
 }
+
+@media (max-width: 1100px) {
+    .about_us_section {
+        flex-direction: column;
+        padding: 66px 0 76px 0
+    }
+    .about_us_cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 120px);
+    }
+
+    .about_us_info {
+        width: 100%;
+        padding: 35px 0;
+    }
+
+    .about_us_section h2 {
+        margin-bottom: 0;
+    }
+
+}
