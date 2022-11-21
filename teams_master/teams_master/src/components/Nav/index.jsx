@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import s from './index.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   return (
-    <View>
-      <Text>Nav</Text>
-    </View>
+    <nav className={s.nav_menu}>
+      <Link to="/configurations_page">Configurations</Link>
+      <Link to="/teams_page">Teams</Link>
+    </nav>
+    
   )
 }
 
-const styles = StyleSheet.create({})
