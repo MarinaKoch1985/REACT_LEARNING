@@ -11,7 +11,10 @@ function App() {
   const [ users, setUsers ] = useState([]);
 
   const addTeam = (team_title) => {
-    setTeams([...teams, { value: team_title, label: team_title }])
+    setTeams([...teams, { 
+      value: team_title, 
+      label: team_title 
+    }])
   }
 
   const addUser = (name_value, team_value) => {
@@ -22,11 +25,11 @@ function App() {
     }])
   }
 
-  const deleteUser = () => {}
+  const deleteUser = (id) => setUsers(users.filter(el => el.id !== id));
   // Реализовать удаление карточки при клике на нее (метод filter)
 
   return (
-    <Context.Provider value={{ teams, addTeam, addUser, users }}>
+    <Context.Provider value={{ teams, addTeam, addUser, users, deleteUser }}>
       <Nav />
       <Routes>
         <Route path="/configurations_page" element={<ConfigurationsPage />} />
