@@ -1,6 +1,6 @@
 import CardsContainer from "../CardsContainer";
 import { words } from '../../Data/words'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import React from "react";
 import Triggers from "../Triggers";
 import AddPostForn from "../AddPostForm";
@@ -8,6 +8,17 @@ import AddPostForn from "../AddPostForm";
 function App() {
 
   const [ cards, setCards ] = useState(words);
+
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('cards'));
+    setCards(res)
+  }, []);// следить за состоянием не нужно, функция запускается один раз при перезагрузке страницы
+
+  useEffect(() => {
+    localStorage.setItem('cards', JSON.stringify(cards))
+  }, [cards]); // функция выпоняется каждый раз при изменении состояния cards
+
+  // второй аргумент - указание на то, за каким состоянием надо следить
 
   const change_to_eng = () => {
     setCards(cards.map(el => {
