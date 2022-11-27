@@ -1,5 +1,5 @@
 import PostsContainer from "../PostContainer";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { posts_data } from '../../data/posts'
 import { Context } from '../../context'
 import AddPostForm from "../AddPostForm";
@@ -7,6 +7,19 @@ import AddPostForm from "../AddPostForm";
 function App() {
 
   const [ posts, setPosts ] = useState(posts_data);
+
+  useEffect(() => {
+    const res = JSON.parse(localStorage.getItem('posts'));
+    setPosts(res)
+  }, []);// следить за состоянием не нужно, функция запускается один раз при перезагрузке страницы
+
+
+  useEffect(() => {
+    localStorage.setItem('posts', JSON.stringify(posts) )
+  }, [posts]);// функция выпоняется каждый раз при изменении состояния cards
+
+  // второй аргумент - указание на то, за каким состоянием надо следить
+
 
   const change_like = (id) => {
     // Найти карточку по айди - метод find()
