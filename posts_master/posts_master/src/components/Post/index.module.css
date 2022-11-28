@@ -25,3 +25,11 @@
     color: white;
     border-color: transparent;
   }
+
+  .close_icon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: azure;
+    cursor: pointer;
+  }
