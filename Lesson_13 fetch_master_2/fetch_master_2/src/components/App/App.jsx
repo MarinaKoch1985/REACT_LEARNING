@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   const createNewProduct = product => setProducts(state => [...state, product]);
-  const createNewUser = user => setUsers(state => [...state, user]);
+  const createNewUser = user => setUsers(prev => [...prev, user]);
 
   return (
     <div>
