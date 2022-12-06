@@ -12,6 +12,10 @@ export default function MainPage() {
         <Link to='/users'>
         <button>Users</button>
         </Link>
+
+        <Link to='/to_du'>
+        <button>To do list</button>
+        </Link>
     </div>
   )
 }
