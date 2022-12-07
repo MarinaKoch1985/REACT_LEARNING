@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm} from 'react-hook-form'
+import s from './index.module.css'
 
 export default function FormExample() {
 
@@ -30,7 +31,7 @@ export default function FormExample() {
         <button>Send</button>
     </form>
 
-    <div>
+    <div className={s.error_wessage}>
       {errors.email && <p>{errors.email?.message}</p>}
       {errors.password && <p>{errors.password?.message}</p>}
     </div>
