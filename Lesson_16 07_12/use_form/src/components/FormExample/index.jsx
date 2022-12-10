@@ -4,7 +4,7 @@ import s from './index.module.css'
 
 export default function FormExample() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const emailRegister = register('email', {
     required: '*The field "email" is required',
@@ -22,7 +22,11 @@ export default function FormExample() {
     }
   });
 
-  const submit = (data) => console.log(data);
+  const submit = (data) => {
+    console.log(data);
+    reset();// ochistka input posle otpravki formi
+  }
+
   return (
     <div>
     <form onSubmit={handleSubmit(submit)} >
