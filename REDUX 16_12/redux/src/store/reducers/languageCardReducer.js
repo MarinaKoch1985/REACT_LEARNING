@@ -23,10 +23,10 @@ export const languageCardReducer = (state = defaultState, action) => {
 
     } else if (action.type === CHANGE_SITE) {
         return state.map(el => {
-            if(el.id !== action.payload) {
+            if(el.id === action.payload) {
             el.lang = el.lang === 'eng' ? 'rus' : 'eng'
         }
-
+        return el
     })
     } else {
         return state

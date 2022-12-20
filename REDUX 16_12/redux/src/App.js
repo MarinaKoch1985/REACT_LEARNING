@@ -1,11 +1,11 @@
-import LanguageCard from "./components/LanguageCard";
+import LanguageCards from "./components/LanguageCards";
 import Products from "./components/Products";
 
 function App() {
   return (
     <div>
      <Products />
-     <LanguageCard />
+     <LanguageCards />
     </div>
   );
 }
