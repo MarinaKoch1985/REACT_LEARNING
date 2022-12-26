@@ -1,16 +1,15 @@
 import React from 'react'
 import User from '../User'
 import { useSelector, useDispatch } from 'react-redux'
-import { deleteUser } from '../../store/userReduser';
-
+import { deleteUser } from '../../store/redusers/userReduser';
 import s from './index.module.css'
 
 export default function UsersContainer() {
 
     const state = useSelector(state => state.users);
-    const disppatch = useDispatch();
+    const dispatch = useDispatch();
 
-    const delete_user = id => disppatch(deleteUser(id));
+    const delete_user = id => dispatch(deleteUser(id));
   return (
     <div className={s.users_container}>
         {

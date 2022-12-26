@@ -1,17 +1,17 @@
 import React from 'react'
 import s from './index.module.css'
-import { addUser } from '../../store/userReduser';
+import { addUser } from '../../store/redusers/userReduser';
 import { useDispatch } from 'react-redux';
 
 
 export default function AddUserForm() {
 
-  const disppatch = useDispatch();
+  const dispatch = useDispatch();
 
   const submit = event => {
     event.preventDefault();
     const { name, age, country } = event.target;
-    disppatch(addUser({
+    dispatch(addUser({
       name: name.value,
       age: age.value, 
       country: country.value
