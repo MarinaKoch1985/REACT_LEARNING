@@ -1,7 +1,10 @@
 import React from 'react'
+import s from './index.module.css'
 
-export default function CategoryCard() {
+export default function CategoryCard({ category }) {
   return (
-    <div>CategoryCard</div>
+    <div className={s.category_card}>
+        { category }
+    </div>
   )
 }

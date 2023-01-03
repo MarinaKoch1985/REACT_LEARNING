@@ -1,0 +1,7 @@
+.categories_page {
+    max-width: 800px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
