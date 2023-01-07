@@ -13,7 +13,10 @@ export default function CategoriesPage() {
     
 
   return (
-    <div className={s.categories_page}>
+    
+    categories.length === 0
+     ? <p>Categories are louding...</p>
+     : <div className={s.categories_page}>
         {
             categories.map(el => <CategoryCard key={el} category={el} />)
         }

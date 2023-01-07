@@ -20,10 +20,14 @@ export default function ProductsPage() {
     console.log(products);
 
   return (
-    <div className={s.products_page}>
-       {
-        products.map(el => <ProductCard key={el.id} {...el} />)
-       }
+    
+    products.length === 0
+     ? <p> {category} are louding...</p>
+     : <div className={s.products_page}>
+        {
+            products.map(el => <ProductCard key={el.id} {...el} />)
+        }
     </div>
+    
   )
 }
