@@ -1,0 +1,33 @@
+.footer {
+    background-color: white;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    font-weight: 400;
+    display:  grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1348px;
+    height: 275px;
+    left: 30px;
+    top: 2518px;
+    position: absolute;
+    
+  }
+  
+  .footer div {
+    gap: 10px;
+    
+    height: 50px;
+  }
+
+  .cont_info h1 {
+    font-weight: 700;
+    font-size: 40x;
+
+  }
+
+    .pfone {
+    width: 600px;
+    height: 91px;
+    top: 2595px;
+    left: 31px;
+  }
