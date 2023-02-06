@@ -51,3 +51,8 @@
   .product_card a:hover {
     color: #a20000;
   }
+
+  /* .product_card:hover {
+    background-color: #34495E;
+    color: white;
+  } */

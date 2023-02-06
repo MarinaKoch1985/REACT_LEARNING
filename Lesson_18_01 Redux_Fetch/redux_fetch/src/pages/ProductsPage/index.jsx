@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { load_products } from '../../requests/products_req';
 import ProductCard from '../../components/ProductCard';
 import s from './index.module.css'
+import { sortProducts } from '../../store/reducers/products';
+import { searchPrice } from '../../store/reducers/products';
 
 export default function ProductsPage() {
 
@@ -17,14 +19,47 @@ export default function ProductsPage() {
     dispatch(load_products(category))
   }, []);
 
-  // console.log(products);
+  const sort_products = event => dispatch(sortProducts(event.target.value));
+  
+  const search = event => {
+    event.preventDefault();
+    const { min, max } = event.target;
+    const min_value = min.value || 0;
+    const max_value = max.value || Infinity;
+    dispatch(searchPrice({min_value, max_value}))
+  }
 
   return (
+    
     <div>
       <p>{ category_up }</p>
+
+      <div className={s.sorting}>
+
+        <div>
+          <span>Price:</span>
+          <form className={s.search_form} onSubmit={search}>
+            <input type="number" placeholder='from' name='min' />
+            <input type="number" placeholder='to' name='max' />
+            <button>Search</button>
+          </form>
+        </div>
+
+        <div>
+          <span>Sort by:</span>
+          <select className={s.sort_select} onInput={sort_products}>
+            <option value="default">default</option>
+            <option value="title">title</option>
+            <option value="price">price</option>
+          </select>
+        </div>
+        </div>
+       
       <div className={s.products}>
         {
-          products.map(el => <ProductCard key={el.id} {...el} />)
+          products
+          .filter(el => !el.hide)
+          .map(el => <ProductCard key={el.id} {...el} />)
         }
       </div>
     </div>

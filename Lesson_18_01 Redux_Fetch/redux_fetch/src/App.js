@@ -11,6 +11,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Layout />}>
+        
           <Route index element={<CategoriesPage />} />
           <Route path='cart' element={<CartPage />} />
           <Route path=':category' element={<ProductsPage />} />
