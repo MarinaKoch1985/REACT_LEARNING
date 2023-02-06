@@ -2,7 +2,7 @@ import React from 'react'
 import CategoriesSection from '../../components/CategoriesSection'
 import DiscountCoupon from '../../components/DiscountCoupon'
 import SalesBanner from '../../components/SalesBanner'
-import SalesItems from '../../components/SalesItems'
+import ProductsSection from '../../components/ProductsSection'
 import { load_categories } from '../../requests/categories_req'
 
 
@@ -15,9 +15,7 @@ export default function HomePage() {
         <SalesBanner />
         <CategoriesSection />
         <DiscountCoupon />
-        <SalesItems />
-        
-      
+        <ProductsSection />
     </div>
   )
 }

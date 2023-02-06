@@ -17,7 +17,7 @@ export default function CategoriesContainer() {
   return (
     <div className={s.category_container}>
         {
-            categories.map(el => <CategoryCard key={el.id} {...el}/>)
+            categories.slice(0, 4).map(el => <CategoryCard key={el.id} {...el}/>)
         }
     </div>
   )

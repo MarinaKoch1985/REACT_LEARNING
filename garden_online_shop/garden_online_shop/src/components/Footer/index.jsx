@@ -8,14 +8,16 @@ export default function Footer() {
         <div className={s.cont_info}>
             <h1>Контакты</h1>
             <p className={s.pfone}>+7 999 999 99 99</p>
+            <div className={s.icons}>
             <InstagramOutlined />
             <WhatsAppOutlined />
+            </div>
         </div>
-        <div >
+        <div className={s.address} >
             <h1>Адрес</h1>
             <p>г. Космонавтов
                проезд Космонавтов, д.11</p>
-             <p>Режим работы</p>  
+             <h2>Режим работы</h2>  
              <p>Круглосуточно</p>
         </div>
     </footer>

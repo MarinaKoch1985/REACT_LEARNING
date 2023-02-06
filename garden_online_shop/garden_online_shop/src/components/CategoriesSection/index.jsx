@@ -8,8 +8,6 @@ export default function CategoriesSection() {
       <div>
         <p className={s.categ_text}>Категории</p>
         <CategoriesContainer />
-        
-       
       </div>
     </section>
         

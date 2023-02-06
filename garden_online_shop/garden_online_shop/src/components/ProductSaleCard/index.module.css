@@ -1,0 +1,25 @@
+.product_card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid transparent;
+    width: 318px;
+    height: 600px;
+    position: relative;
+}
+
+.product_card img {
+    width: 318px;
+    height: 370px;
+    object-fit: cover;
+}
+
+.product_card p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    
+}
