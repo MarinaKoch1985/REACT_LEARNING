@@ -1,5 +1,4 @@
 import React from 'react'
-import { categoriesReducer } from '../../store/reducers/categories'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { load_categories } from '../../requests/categories_req';
@@ -16,7 +15,7 @@ export default function CategoriesPage() {
   }, [])
 
   return (
-    <div>
+    <div className={s.categories_cont}>
       <h1>Категории</h1>
     <div className={s.categories_page}>
       {

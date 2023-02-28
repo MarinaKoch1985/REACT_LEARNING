@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import { useEffect} from 'react'
 import { load_products } from '../../requests/products_req'
 import ProductSaleCard from '../../components/ProductSaleCard'
@@ -6,6 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import s from './index.module.css'
 
 export default function ProductsSalePage() {
+
+  // const { category } = useParams();
 
     const dispatch = useDispatch();
     const products = useSelector(state => state.products);
@@ -16,7 +19,7 @@ export default function ProductsSalePage() {
 
   return (
 
-    <div>
+    <div className={s.prod_cont}>
 
        <div>
           <span>Price:</span>

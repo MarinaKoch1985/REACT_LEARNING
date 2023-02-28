@@ -6,7 +6,7 @@ export const loadCategories = payload => ({ type: LOAD_CATEGORIES, payload});
 
 export const categoriesReducer = (state = defaultState, action) => {
   if (action.type === LOAD_CATEGORIES){
-    return action.payload //payloud === feth
+    return action.payload 
   } else {
     return state
   }

@@ -1,7 +1,6 @@
 .category_card {
     display: flex;
     flex-direction: column;
-
     cursor: pointer;
 }
 
@@ -21,4 +20,8 @@
     justify-content: center;
     margin: 10px 0;
     
+}
+
+a {
+    text-decoration: none;
 }

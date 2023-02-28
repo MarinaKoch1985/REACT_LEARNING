@@ -1,28 +1,36 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import CartCard from '../../components/CartCard'
-import { cartReduser } from '../../store/reducers/cart'
+import CartCard from '../../components/CartCard';
 import s from './index.module.css'
 
+
 export default function CartPage() {
-
-  const cart = useSelector(state => state.cart);
-
-  const total = cart.reduce((prev, {price, count}) => prev + price * count, 0);
+  const cart = useSelector(state => state.cart)
+  const total = (cart.reduce((prev, {discont_price, count}) => prev + discont_price * count, 0).toFixed(2));
+  
 
   return (
-    <div>
-      <div>
-        {
-          cartReduser.map(el => <CartCard key={el.id} {...el} />)
-        }
-      </div>
-      <div className={s.details}>
-            <h1>Детали заказа</h1>
-            <p>Сумма: { total } p </p>
-            <input type="text" placeholder='Ваш номер телефона' name='phone' />
-            <button>Заказать</button>
+    <div className={s.cart}>
+      {
+        cart.length === 0 
+        ? <p>Корзина пуста...</p>
+        : <div className={s.title_count}>
+            {
+              cart.map(el => <CartCard key={el.id} {...el}/>)
+            }
+          </div>
+      }      
+      <div className={s.order_details_form}>
+        <p className={s.title_form}>Order details</p>
+        <div className={s.total}>
+          <p>Total: </p>
+          <p>{total}<span>€</span></p>
         </div>
+        <div className={s.input_btn}>
+          <input type='number' placeholder='Ваш номер телефона'/>
+          <button>Заказать</button> 
+        </div>     
+      </div>
     </div>
   )
 }
